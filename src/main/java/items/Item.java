@@ -30,5 +30,11 @@ public abstract class Item implements ISell {
     public void assignItemPrice(double itemPrice) {
         this.sellPrice = itemPrice;
     }
+    public double getSellPrice(){
+        return this.sellPrice;
+    }
+    public double getProfitMargin(){
+        return this.sellPrice-this.price;
+    }
 
 }

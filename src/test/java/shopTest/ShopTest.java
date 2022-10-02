@@ -109,4 +109,14 @@ public class ShopTest {
         assertEquals(10, guitarpick.getMarkup(), 0.0);
         assertEquals(10, shop.getItemsArray().get(0).getMarkup(), 0.0);
     }
+
+    @Test
+    public void canCalculateTotalProfitInDolerinoos(){
+        Instrument guitar = new Guitar(InstrumentType.GUITAR, 100, 6);
+        Item guitarpick = new GuitarPick(ItemType.GUITAR_PICK);
+        shop.assignSellPrice(guitar,150);
+        shop.assignSellPrice(guitarpick,20);
+        assertEquals(60,shop.getPotProfit(),0.0);
+        assertEquals(60,shop.getMarkup(),0.0);
+    }
 }

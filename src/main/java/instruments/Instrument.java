@@ -47,4 +47,7 @@ public abstract class Instrument implements ISell, IPlay {
     public double getMarkup(){
         return this.sellPrice/this.price;
     }
+    public double getProfitMargin(){
+        return this.sellPrice-this.price;
+    }
 }
